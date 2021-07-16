@@ -10,6 +10,8 @@ RUN git clone -b Lynx-Userbot https://github.com/KENZO-404/Lynx-Userbot /home/Ly
 # Copies config.env (if exists)
 COPY ./sample_config.env ./config.env* /home/Lynx-Userbot/
 
+#Install python requirements
+RUN pip3 install -r https://raw.githubusercontent.com/KENZO-404/Lynx-Userbot/Lynx-Userbot/requirements.txt
 WORKDIR /home/Lynx-Userbot/
 
 # Finishim
